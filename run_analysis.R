@@ -88,7 +88,7 @@ names(dataX) <- gsub("-std\\(\\)", "StdDev", names(dataX))
 # 5.-Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 #Combine data sets:
-dataMerged <- cbind(dataSubject, dataY, dataX)
+dataMerged <- cbind(dataSubject, dataY, meanStdDevDataX)
 #Calculate the mean of each variable for each activity and each subject by selecting the data except the "group by" info:
 tidyDataset <- aggregate(dataMerged[ ,!(colnames(dataMerged) %in% c("subject", "activityId"))], by=list(dataMerged$subject, dataMerged$activityId), FUN=mean, na.rm=TRUE, na.action=NULL)
 #As a result of using the aggregate function, we must rename the colnames:
