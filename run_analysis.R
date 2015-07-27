@@ -77,12 +77,12 @@ dataY$activityId <- activities$activityLabel[dataY$activityId]
 # 4.-Appropriately label the data set with descriptive variable names.
 
 #Replace some abbreviations with a more descriptive word
-names(dataX) <- gsub("Acc", "Acceleration", names(dataX))
-names(dataX) <- gsub("Mag", "Magnitude", names(dataX))
-names(dataX) <- gsub("Freq", "Frequency", names(dataX))
-names(dataX) <- gsub("^t", "Time", names(dataX))
-names(dataX) <- gsub("-mean\\(\\)", "Mean", names(dataX))
-names(dataX) <- gsub("-std\\(\\)", "StdDev", names(dataX))
+names(meanStdDevDataX) <- gsub("Acc", "Acceleration", names(meanStdDevDataX))
+names(meanStdDevDataX) <- gsub("Mag", "Magnitude", names(meanStdDevDataX))
+names(meanStdDevDataX) <- gsub("Freq", "Frequency", names(meanStdDevDataX))
+names(meanStdDevDataX) <- gsub("^t", "Time", names(meanStdDevDataX))
+names(meanStdDevDataX) <- gsub("-mean\\(\\)", "Mean", names(meanStdDevDataX))
+names(meanStdDevDataX) <- gsub("-std\\(\\)", "StdDev", names(meanStdDevDataX))
 
 
 # 5.-Create a second, independent tidy data set with the average of each variable for each activity and each subject.
